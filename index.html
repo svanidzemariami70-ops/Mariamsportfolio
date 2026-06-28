@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Mariam - 3D Portfolio</title>
+
+  <style>
+
+    /* RESET */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #eaeaea;
+      overflow-x: hidden;
+    }
+
+    /* 🎬 MOVING BACKGROUND */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 110%;
+      height: 110%;
+      background-image: url("particle.png");
+      background-size: cover;
+      background-position: center;
+      animation: bgMove 5s ease-in-out infinite;
+      z-index: -1;
+      transform: scale(1.15);
+    }
+
+    /* animation */
+    @keyframes bgMove {
+      0% {
+        transform: scale(1.1) translate(0px, 0px);
+      }
+
+      50% {
+        transform: scale(1.15) translate(-25px, 15px);
+      }
+
+      100% {
+        transform: scale(1.1) translate(0px, 0px);
+      }
+    }
+
+    /* overlay for readability */
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.55);
+      z-index: -1;
+    }
+
+    /* CONTENT */
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 50px;
+      font-size: 24px;
+      color: #ffffff;
+    }
+
+    p {
+      color: #b5b5b5;
+      line-height: 1.6;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background: #222;
+      margin: 40px 0;
+    }
+
+    .card {
+      background: rgba(21, 21, 28, 0.8);
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: rgba(26, 26, 36, 0.9);
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    a:hover {
+      color: #7aa2ff;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Mariam - 3D Artist</h1>
+
+    <p>Interior & Environment Designer</p>
+
+    <hr>
+
+    <h2>About Me</h2>
+
+    <p>
+      I create 3D environments, interiors, and props using Blender and Substance Painter.
+      I focus on lighting, mood, and realism.
+    </p>
+
+    <h2>Portfolio</h2>
+
+    <div class="card">
+
+      <p>Project 1 - ArtStation</p>
+      <a href="https://www.artstation.com/artwork/lGog5e" target="_blank">
+        View Project
+      </a>
+
+      <p>Project 2 - ArtStation</p>
+      <a href="https://www.artstation.com/artwork/vbeXxA" target="_blank">
+        View Project
+      </a>
+
+    </div>
+
+    <h2>Contact</h2>
+
+    <p>Email: Svanidzemariami70@gmail.com</p>
+
+  </div>
+
+</body>
+
+</html>
